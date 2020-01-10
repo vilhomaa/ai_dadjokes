@@ -1,5 +1,5 @@
 # ai_dadjokes
-A program for training a neural network to generate dad jokes based on dad jokes from reddit, and for automatically posting them on instagram
+A program for training a neural network to generate dad jokes based on dad jokes from reddit, and for automatically posting them on instagram. Follow ai_dadjokes on instagram to see this in action.
 
 Works with python 3.6.8. Comments in the files are partly in finnish, but I can translate them to english if needed
 
