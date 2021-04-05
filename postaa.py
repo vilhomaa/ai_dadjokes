@@ -2,9 +2,9 @@
 import os
 os.chdir("Z:\python\dadjokeai\dadjokevenv")
 import kuvanteko
+from uus_postaa import launch_browser, upload_photo
 os.chdir("Z:\python\dadjokeai")
 import pandas as pd
-import instabot
 import time
 import numpy as np
 from random import sample 
@@ -43,8 +43,8 @@ joke = kuvanteko.hae_vitsi()
 
 # check if the font will be too small
 
-def tsekkaa():
-        if kuvanteko.etsi_font(kuvanteko.hae_vitsi()) < 24:
+def tsekkaa(unique = False):
+        if kuvanteko.etsi_font(kuvanteko.hae_vitsi(special=unique)) < 24:
                 vitsin_siirto(liian_pitk = True)
                 return True
         else:
@@ -62,23 +62,21 @@ if numba > 0:
         print("POSTAA!!!")               
         path = kuvanteko.gen_kuva()
 
+        # ottaa vikan osan pathista
+        path = path.split("/")[4]
 
 
         ## KUVAN POSTAUS
 
 
-        bot = instabot.Bot(filter_private_users=False)
-        bot.login(username = dadjokelogin[0], password = dadjokelogin[1])
+        browser = launch_browser()
         time.sleep(5.5)
-        bot.upload_photo(path,caption='\r\n' +'\r\n' +'\r\n' + '#dad #joke #jokes #dadjokes #ai #machine #learning #artificial #intelligence #neural #network #funny #future #robot #humour')
+        upload_photo(path,captiontext='\r\n' +'\r\n' +'\r\n' + '#dad #joke #jokes #dadjokes #ai #machine #learning #artificial #intelligence #neural #network #funny #future #robot #humour',selain = browser)
         ## moves the joke 
         vitsin_siirto()
         
 
 else:
         print("ei postaa")
-
-
-
 
 

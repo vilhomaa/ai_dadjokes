@@ -1,7 +1,12 @@
+# DISCLAIMER: THE CODE I WRITE TODAY IS MUCH BETTER THAN THIS
+Looking at this makes me cringe, but is I'll keep it here as a benchmark for my own progress
+
+# DISCLAIMER2: The code won't work as it is, but the training data needs to be generated and the model needs to be traines and stored in a folder named "training_checkpoints"
+
 # ai_dadjokes
 A program for training a neural network to generate dad jokes based on dad jokes from reddit, and for automatically posting them on instagram. Follow ai_dadjokes on instagram to see this in action.
 
-Works with python 3.6.8. Comments in the files are partly in finnish, but I can translate them to english if needed
+Works with python 3.6 & 3.7 Comments in the files are partly in finnish, but I can translate them to english if needed
 
 ##Breakdown of the files:
 
